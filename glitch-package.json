@@ -1,0 +1,34 @@
+{
+  "name": "wid-welcomer",
+  "version": "1.0.5",
+  "description": "Discord public sesli welcomer bot",
+  "main": "wid.js",
+  "scripts": {
+    "start": "node wid.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wid060/Wid-Discord-Welcomer-Bot.git"
+  },
+  "keywords": [
+    "discord",
+    "wid",
+    "welcomer",
+    "discord.js",
+    "public"
+  ],
+  "author": "Wid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wid060/Wid-Discord-Welcomer-Bot/issues"
+  },
+    "engines": {
+    "node": "14.x"
+  },
+  "homepage": "https://github.com/Wid060/Wid-Discord-Welcomer-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "ms": "^2.1.3",
+    "ytdl-core": "^4.5.0"
+  }
+}
