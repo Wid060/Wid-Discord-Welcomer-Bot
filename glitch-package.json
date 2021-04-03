@@ -1,5 +1,5 @@
 {
-  "name": "wid-welcomer",
+  "name": "Wid-Discord-Welcomer-Bot",
   "version": "1.0.5",
   "description": "Discord public sesli welcomer bot",
   "main": "wid.js",
