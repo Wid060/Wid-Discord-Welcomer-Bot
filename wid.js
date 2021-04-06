@@ -11,20 +11,18 @@ widbot.on("ready", () => {
   }, 60000);//Burası durum kaybolmaaması için 1 dk bir durumu yeniliyor.
   console.log(`${widbot.user.username} Adlı hoşgeldin botu aktif!`);
 });
-
 const connections = new Map();
-widbot.on('voiceStateUpdate', async (newState, member) => {
+let broadcast;
+client.on('voiceStateUpdate', async (member, newState) => {
   const voiceChannels = widbot.guilds.cache.get(GUILD_ID).channels.cache.get(HG_VOICE_CHANNEL);
+  const voiceChannel = member.voice;
   if (newState.channelID == HG_VOICE_CHANNEL) {
-	    if(!newState.member.roles.cache.has(Unregister_Role)) {
+  if(!newState.member.roles.cache.has(Unregister_Role)) return
         voiceChannels.join().then(connection => {
-        const stream = ytdl(HG_VIDEO_LINK, {quality:'highest', filter:'audioonly'}, {passes: 3, volume: 0.7});//Burdaki ayarlar ses ayarları yani kendime göre ayarladım sizde kendinize göre ayarlayabilirsiniz.
+        const stream = ytdl(HG_VIDEO_LINK, {quality:'highest', filter:'audioonly'}, {passes: 3, volume: 0.5});
         const dispatcher = connection.play(stream);
-        })
-		}else{
-       return;
-		}}
-})
+})}});
+
 
 widbot.login(TOKEN);
 
